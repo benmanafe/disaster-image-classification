@@ -28,6 +28,7 @@ The project uses a dataset containing **1946 images** of natural disasters.
 * **Classes:** Earthquake, Land Slide, Urban Fire, and Water Disaster.
 * **Imbalance:** The dataset is heavily imbalanced. The Water Disaster class has 1035 images, the Landslide and Urban Fire classes have 456 and 419 images respectively, and the Earthquake class has only 36 images.
 * **Image Size:** The original image sizes are inconsistent, ranging from 157x220 to 820x2048 pixels.
+* **Source:** [Disaster Images Dataset on Kaggle](https://www.kaggle.com/datasets/varpit94/disaster-images-dataset)
 
 ---
 
@@ -61,6 +62,7 @@ The performance of the three models was evaluated on the unseen test set. The Mo
 | Scratch Model | 1.232878 | 0.756410 | 0.781836 | 0.756410 | 0.757539 |
 | MobileNetV2 (Frozen) | 0.587004 | 0.834135 | 0.829805 | 0.834135 | 0.819009 |
 | **MobileNetV2 (Unfrozen)** | **0.275663** | **0.918269** | **0.915818** | **0.918269** | **0.912862** |
+
 _Data sourced from the results table in the report._
 
 The unfrozen MobileNetV2 model's superior performance is likely due to its ability to adapt its pre-trained weights to the specific features of the disaster image dataset, resulting in better adaptation and higher accuracy.
