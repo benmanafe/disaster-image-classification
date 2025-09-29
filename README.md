@@ -55,23 +55,19 @@ The project uses a dataset containing **1946 images** of natural disasters.
 
 ## Results
 
-The performance of the three models was evaluated on the unseen test set. The MobileNetV2 (Unfrozen) model achieved the best results across all metrics.
+The performance of the three models was evaluated on the unseen test set. The **MobileNetV2 (Freeze)** model achieved the best results across all metrics, with the highest accuracy and lowest loss.
 
 | Model | Loss | Accuracy (%) | Precision (%) | Recall (%) | F1-Score (%) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Scratch Model | 1.232878 | 0.756410 | 0.781836 | 0.756410 | 0.757539 |
-| MobileNetV2 (Frozen) | 0.587004 | 0.834135 | 0.829805 | 0.834135 | 0.819009 |
-| **MobileNetV2 (Unfrozen)** | **0.275663** | **0.918269** | **0.915818** | **0.918269** | **0.912862** |
-
-_Data sourced from the results table in the report._
-
-The unfrozen MobileNetV2 model's superior performance is likely due to its ability to adapt its pre-trained weights to the specific features of the disaster image dataset, resulting in better adaptation and higher accuracy.
+| Scratch Model | 1.0868 | 78.37 | 78.87 | 78.37 | 77.80 |
+| MobileNetV2 (Unfreeze) | 0.5977 | 85.10 | 84.07 | 85.10 | 83.88 |
+| **MobileNetV2 (Freeze)** | **0.2640** | **90.87** | **90.59** | **90.87** | **90.31** |
 
 ---
 
 ## Conclusion
 
-Pre-trained models, specifically **MobileNetV2**, significantly outperform a CNN built from scratch for this disaster classification task. Fine-tuning the entire network (the "unfrozen" approach) yields the best performance, achieving higher accuracy and better metrics than the frozen model and the scratch model. This demonstrates the power of transfer learning for image classification problems.
+Pre-trained models, specifically **MobileNetV2**, significantly outperform a CNN built from scratch for this disaster classification task. In this experiment, using the **frozen** pre-trained layers and only training a custom classifier yielded the best performance. This suggests that the features learned by MobileNetV2 on its original dataset are highly effective and generalizable for this task, performing even better than fine-tuning the entire network in this specific case.
 
 ---
 
