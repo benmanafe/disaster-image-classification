@@ -2,7 +2,7 @@
 
 This project explores the classification of natural disaster images using deep learning. It compares the performance of a Convolutional Neural Network (CNN) built from scratch against a pre-trained MobileNetV2 model on a multiclass disaster dataset. An interactive web app is also included for live classification.
 
-## 📋 Table of Contents
+## Table of Contents
 * [Project Overview](#project-overview)
 * [Dataset](#dataset)
 * [Methodology](#methodology)
@@ -73,7 +73,7 @@ We implement and evaluate two approaches:
 
 ---
 
-## 🚀 Interactive Demo App
+## Interactive Demo App
 
 This project includes an interactive web application built with **Streamlit** that allows you to classify your own disaster images using the trained MobileNetV2 model.
 
@@ -86,28 +86,7 @@ This project includes an interactive web application built with **Streamlit** th
 
 
 
-### How to Run the App Locally
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
-    ```
-2.  **Create a `requirements.txt` file** with the following content:
-    ```
-    streamlit
-    numpy
-    torch
-    torchvision
-    Pillow
-    ```
-3.  **Install the required libraries:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-4.  **Download the trained model weights** (`custom-mobilenet-model.pth`) and place the file in the root directory of the project.
+### Live Demo
+You can try the live application without any local setup. Click the link below to access the deployed Streamlit app:
 
-5.  **Run the Streamlit app:**
-    ```bash
-    streamlit run disaster-streamlit-classification.py
-    ```
-    The application will open in your web browser!
+**[➡️ Access the Disaster Classification App Here](https://disaster-app-classificationpy-uujevwjsxu8gqgmrjzgdot.streamlit.app/)**
