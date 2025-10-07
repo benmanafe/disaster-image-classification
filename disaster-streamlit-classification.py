@@ -33,7 +33,7 @@ def load_model():
     model.eval()
     return model
 
-CLASS_LABELS = ['Earthquake', 'Land_Slide', 'Urban_Fire', 'Water_Disaster']
+CLASS_LABELS = ['Earthquake', 'Land Slide', 'Urban Fire', 'Water Disaster']
 
 def preprocess_image(image, target_size=(224, 224)):
     if image.mode != 'RGB':
@@ -108,3 +108,4 @@ if uploaded_file is not None:
                 except Exception as e:
 
                     st.error(f"Error: {e}")
+
