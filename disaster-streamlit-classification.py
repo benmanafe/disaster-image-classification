@@ -36,6 +36,9 @@ def load_model():
 CLASS_LABELS = ['Earthquake', 'Land_Slide', 'Urban_Fire', 'Water_Disaster']
 
 def preprocess_image(image, target_size=(224, 224)):
+    if image.mode != 'RGB':
+        image = image.convert('RGB')
+    
     transform = transforms.Compose([
         transforms.Resize(target_size),
         transforms.ToTensor(),
@@ -103,4 +106,5 @@ if uploaded_file is not None:
                         st.progress(float(prob), text=f"{label}: {prob*100:.2f}%")
                 
                 except Exception as e:
+
                     st.error(f"Error: {e}")
